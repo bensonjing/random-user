@@ -1,13 +1,10 @@
-//TODO: CSS 
-//TODO: password specification
 //TODO: user specify parameters 
 //TODO: picture 
-
 
 const generate = document.querySelector('#generate')
 generate.onclick = () => {
     $.ajax({
-        url: 'https://randomuser.me/api/',
+        url: 'https://randomuser.me/api/?password=special,upper,lower,number,8-16',
         dataType: 'json',
         success: function(data) {
             const results = data['results'][0];
